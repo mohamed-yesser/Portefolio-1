@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="mediaqueries.css"/>
 </head>
 <body>
-    <nav id="desktop-nav"> 
+    <nav id="desktop-nav">
         <div class="logo">Mohamed Yesser Laabidi</div>
         <div>
             <ul class="nav-links">
@@ -18,46 +18,18 @@
             </ul>
         </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Mohamed Yesser Laabidi</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Education</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
-            </div>
+    <nav id="hamburger-nav" style="display: none;">
+        <button class="hamburger">☰</button>
+        <div class="nav-menu">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
     <section id="profile">
-        <div class="section_pic-container">
-            <img src="./assets/pic.jpg" alt="Mohamed Yesser Laabidi profile picture"/>
-            <div class="btn-container">
-                <div class="icon-btn-group">
-                    <img 
-                        src="./assets/book.png" 
-                        alt="Book" 
-                        class="icon book-icon" 
-                        onclick="location.href='./#contact'"
-                        style="cursor: pointer;"
-                    />
-                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
-                </div>
-                <div class="icon-btn-group">
-                    <img 
-                        src="./assets/download.png" 
-                        alt="Download" 
-                        class="icon download-icon" 
-                        onclick="window.open('./assets/resume Full Stack.pdf')"
-                        style="cursor: pointer;"
-                    />
-                    <button class="btn btn-color-2" onclick="window.open('./assets/resume Full Stack.pdf')">Download resume</button>
-                </div>
+        <div class="left-column">
+            <div class="section_pic-container">
+                <img src="./assets/pic.jpg" alt="Mohamed Yesser Laabidi profile picture"/>
             </div>
         </div>
         <div class="section__text">
@@ -65,21 +37,32 @@
             <h class="title">Mohamed Yesser Laabidi</h>
             <p class="section__text__p2">Full Stack Web Developer</p>
             <div class="socials-container">
-                <img 
-                    src="./assets/linkedin.png" 
-                    alt="my linkedin profile" 
-                    class="icon" 
+                <img src="./assets/linkedin.png" alt="my linkedin profile" class="icon" 
                     onclick="window.open('https://www.linkedin.com/in/laabidi-mohamed-yesser-43bb8b100/', '_blank')"
                 />
-                <img 
-                    src="./assets/github.png" 
-                    alt="my github profile" 
-                    class="icon" 
+                <img src="./assets/github.png" alt="my github profile" class="icon" 
                     onclick="window.open('https://github.com/mohamed-yesser', '_blank')"
                 />
             </div>
-            <img src="./assets/webdev.jpg" alt="Web Development" class="webdev-image"/>
-       
+                        <img src="./assets/webdev.jpg" alt="Web Development" class="webdev-image"/>
+            <div class="buttons-row">
+                <div class="icon-btn-group" onclick="location.href='./#contact'">
+                    <img 
+                        src="./assets/book.png" 
+                        alt="Book" 
+                        class="icon book-icon"
+                    />
+                    <button class="btn btn-color-1">Contact info</button>
+                </div>
+                <div class="icon-btn-group" onclick="window.open('./assets/resume Full Stack.pdf')">
+                    <img 
+                        src="./assets/download.png" 
+                        alt="Download" 
+                        class="icon download-icon"
+                    />
+                    <button class="btn btn-color-1">Download resume</button>
+                </div>
+            </div>
         </div>
     </section>
     <section id="about">
@@ -467,7 +450,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
             
-            <button type="submit" class="btn btn-color-2">Send</button>
+            <button type="submit" class="btn btn-color-3">Send</button>
         </form>
     </section>
     <footer>
