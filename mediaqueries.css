@@ -1,121 +1,11 @@
-@media screen and (max-width: 1400px) {
-    /* Force everything to stay within viewport */
-    html, body {
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-    }
-
-    /* Center all content */
-    #profile,
-    #about,
-    #experience,
-    #projects,
-    #contact {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 1rem !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Fix profile section specifically */
-    #profile {
-        width: 92% !important;
-        max-width: 1400px !important;
-        margin: 120px auto 0 !important;
-        padding: 0 2rem !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: flex-start !important;
-        gap: 4rem !important;
-    }
-
-    /* Left column */
-    .left-column {
-        width: 38% !important;
-        min-width: 320px !important;
-        margin: 0 !important;
-    }
-
-    /* Right section (text content) */
-    .section__text {
-        flex: 1 !important;
-        margin: 0 !important;
-        padding: 2.5rem !important;
-        max-width: 600px !important;
-    }
-
-    /* Fix profile picture */
-    .section_pic-container {
-        width: 200px !important;
-        height: 200px !important;
-        margin: 0 auto 1rem !important;
-        border-radius: 20px !important;
-        overflow: hidden !important;
-    }
-
-    .section_pic-container img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center !important;
-    }
-
-    /* Center text content */
-    .section__text {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        text-align: center !important;
-    }
-
-    /* Fix containers */
-    .section-container,
-    .about-containers,
-    .experience-details-container {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-    }
-
-    /* Fix buttons */
-    .buttons-row {
-        width: 100% !important;
-        max-width: 400px !important;
-        margin: 1rem auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1rem !important;
-    }
-}
-
-/* Additional mobile adjustments */
-@media screen and (max-width: 768px) {
-    .section_pic-container {
-        width: 150px !important;
-        height: 150px !important;
-    }
-
-    .nav-menu {
-        width: auto !important;
-        right: 1rem !important;
-        left: 1rem !important;
-    }
-
-    /* Hide desktop nav */
-    #desktop-nav {
+@media screen and (max-width: 1200px) {
+    #desktop-nav .nav-links {
         display: none !important;
     }
 
-    /* Show and style hamburger nav */
     #hamburger-nav {
         display: flex !important;
-        justify-content: flex-end !important;
+        justify-content: space-between !important;
         align-items: center !important;
         height: 80px !important;
         width: 100% !important;
@@ -123,48 +13,92 @@
         top: 0 !important;
         left: 0 !important;
         padding: 0 2rem !important;
-        background: rgba(255, 255, 255, 0.8) !important;
+        background: rgba(0, 113, 227, 0.05) !important;
         backdrop-filter: blur(20px) !important;
         -webkit-backdrop-filter: blur(20px) !important;
-        border-bottom: 2px solid #0071e3 !important;
+        border-bottom: 2px solid rgba(0, 113, 227, 0.2) !important;
         z-index: 9999 !important;
     }
 
-    /* Style the hamburger menu */
-    .hamburger-menu {
-        width: 2.5rem !important;
-        height: 2rem !important;
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        background: rgba(0, 113, 227, 0.05);
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(0, 113, 227, 0.2);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu a {
+        color: var(--primary);
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hamburger {
+        width: 48px !important;
+        height: 48px !important;
+        padding: 8px !important;
         display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: none !important;
+        border: none !important;
         cursor: pointer !important;
-        z-index: 10000 !important;
+        font-size: 2rem !important;
     }
 
-    /* Menu links container */
-    .menu-links {
-        display: none !important;
-        position: fixed !important;
-        top: 80px !important;
-        right: 0 !important;
-        width: 100% !important;
-        max-width: 300px !important;
-        background: rgba(255, 255, 255, 0.95) !important;
+    .hamburger i {
+        font-size: 2.5rem !important;
+        color: #0071e3 !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Increase menu item size */
+    .nav-menu a {
+        font-size: 1.2rem !important;
+        padding: 0.8rem 1.2rem !important;
+    }
+
+    /* Make menu wider on mobile */
+    .nav-menu {
+        width: 250px !important;
+        right: 1rem !important;
+    }
+
+    /* Increase hamburger icon tap target */
+    .hamburger {
         padding: 1rem !important;
-        border-radius: 0 0 0 20px !important;
-        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1) !important;
+        margin-right: -1rem !important;
     }
 
-    /* Show menu when active */
-    .menu-links.open {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1rem !important;
+    /* Ensure menu doesn't overflow screen */
+    .nav-menu.active {
+        max-height: calc(100vh - 100px) !important;
+        overflow-y: auto !important;
     }
+}
 
-    /* Adjust profile section margin for mobile */
-    #profile {
-        margin-top: 100px !important;
+/* Add styles for even smaller screens */
+@media screen and (max-width: 480px) {
+    .nav-menu {
+        width: calc(100vw - 2rem) !important;
+        right: 1rem !important;
+        left: 1rem !important;
     }
 }
 
@@ -196,76 +130,6 @@
 .icon-btn-group .btn {
     pointer-events: none;
     cursor: default;
-}
-
-/* Fix project card interference */
-@media screen and (min-width: 769px) {
-    /* Project container fixes */
-    .details-container.color-container {
-        background: var(--card-bg) !important;
-        border: 1px solid var(--border) !important;
-        box-shadow: var(--shadow-md) !important;
-        position: relative !important;
-        z-index: 1 !important;
-        isolation: isolate !important; /* Prevents interference */
-    }
-
-    /* Remove any unwanted borders or lines */
-    .project-img,
-    .details-container,
-    .section-container {
-        border: none !important;
-        box-shadow: none !important;
-        background-clip: padding-box !important;
-    }
-
-    /* Fix container spacing */
-    #projects .details-container {
-        margin: 1rem !important;
-        width: calc(50% - 2rem) !important; /* Adjust width accounting for margin */
-    }
-}
-
-/* Full width containers on mobile/zoom */
-@media screen and (max-width: 1200px) {
-    #projects .details-container.color-container {
-        width: 100% !important;
-        margin: 1rem 0 !important;
-        max-width: 100% !important;
-    }
-
-    .project-img {
-        width: 100% !important;
-    }
-
-    /* Make sure parent containers are also full width */
-    .section-container,
-    .about-containers,
-    .experience-details-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 1rem !important;
-    }
-
-    /* Remove any grid/flex layouts that might limit width */
-    #projects .article-container {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    #profile {
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        padding: 0 1rem !important;
-    }
-
-    .left-column,
-    .section__text {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-    }
 }
 
 
