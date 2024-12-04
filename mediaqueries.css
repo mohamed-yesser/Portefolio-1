@@ -238,6 +238,39 @@
     .buttons-row {
         padding: 0 1rem !important;
     }
+
+    /* Remove horizontal scrollbar */
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+
+    /* Ensure all sections stay within viewport */
+    section, 
+    .section-container,
+    #profile,
+    #about,
+    #experience,
+    #projects,
+    #contact {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix any potentially overflowing elements */
+    .webdev-image,
+    .about-containers,
+    .experience-details-container,
+    .contact-info-upper-container {
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 /* Add styles for even smaller screens */
