@@ -2966,18 +2966,15 @@ p.section__text__p1 {
         gap: 2rem !important;
     }
 
-    .section_pic-container,
+    .section_pic-container {
+        width: 100% !important;
+        max-width: 500px !important;
+        height: 800px !important; /* Much taller profile picture container */
+    }
+
     .section__text {
         width: 100% !important;
         max-width: 500px !important;
-        height: auto !important; /* Allow height to adjust */
-    }
-
-    .section_pic-container {
-        height: 500px !important; /* Fixed height for mobile */
-    }
-
-    .section__text {
         padding: 2rem !important;
     }
 }
@@ -2989,6 +2986,6 @@ p.section__text__p1 {
     }
 
     .section_pic-container {
-        height: 400px !important; /* Smaller height for very small screens */
+        height: 800px !important; /* Keep same height for consistency */
     }
 }
