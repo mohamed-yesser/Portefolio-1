@@ -65,6 +65,37 @@
         font-size: 2.5rem !important;
         color: #0071e3 !important;
     }
+
+    /* Center all sections */
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2rem 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Center all containers */
+    .section-container,
+    .about-details-container,
+    .experience-details-container,
+    .about-containers {
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Center project containers */
+    .details-container.color-container {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 1rem auto !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -91,6 +122,54 @@
         max-height: calc(100vh - 100px) !important;
         overflow-y: auto !important;
     }
+
+    /* Force center alignment */
+    .section__text__p1,
+    .title,
+    .section__text__p2,
+    .experience-sub-title,
+    .project-title {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Center profile content */
+    #profile {
+        padding: 0 1rem !important;
+        margin-top: 100px !important;
+    }
+
+    .section__text {
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        padding: 2rem !important;
+        text-align: center !important;
+    }
+
+    /* Center buttons */
+    .buttons-row {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 1rem auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .icon-btn-group {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Center images */
+    .project-img,
+    .webdev-image {
+        margin: 0 auto !important;
+        display: block !important;
+    }
 }
 
 /* Add styles for even smaller screens */
@@ -99,6 +178,21 @@
         width: calc(100vw - 2rem) !important;
         right: 1rem !important;
         left: 1rem !important;
+    }
+
+    /* Adjust container widths */
+    .section-container,
+    .about-details-container,
+    .experience-details-container,
+    .about-containers,
+    .details-container {
+        width: 95% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Ensure text stays centered */
+    * {
+        text-align: center !important;
     }
 }
 
