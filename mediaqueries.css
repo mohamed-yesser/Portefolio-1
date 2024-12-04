@@ -5,23 +5,26 @@
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        gap: 2rem !important;
     }
 
-    /* Fix profile picture styling */
+    /* Profile picture container */
     .section_pic-container {
-        width: 250px !important; /* Increased width */
-        height: 250px !important; /* Increased height */
-        margin: 2rem auto !important;
+        width: 300px !important;  /* Made even bigger to ensure quality */
+        height: 300px !important;
+        margin: 0 auto !important;
         position: relative !important;
-        overflow: hidden !important; /* Hide overflow */
-        border-radius: 20px !important; /* Match your design */
+        overflow: hidden !important;
+        border-radius: 20px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
     }
 
+    /* Profile picture image */
     .section_pic-container img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important; /* This ensures the image covers the area properly */
-        object-position: center !important; /* Centers the image */
+        object-fit: cover !important;
+        object-position: center top !important; /* Adjusted to favor the top of the image */
         border-radius: 20px !important;
         display: block !important;
     }
@@ -227,8 +230,8 @@
     }
 
     .section_pic-container {
-        width: 200px !important;
-        height: 200px !important;
+        width: 250px !important;
+        height: 250px !important;
         margin: 1rem auto !important;
     }
 
