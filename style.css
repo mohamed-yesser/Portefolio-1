@@ -2811,27 +2811,25 @@ p.section__text__p1 {
     margin-top: 80px !important;
 }
 
-/* Profile containers - make them exactly the same height and align bottom */
+/* Make both containers exactly the same width */
 .section_pic-container,
 .section__text {
+    width: 500px !important; /* Set both containers to same width */
     height: 700px !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-end !important; /* Changed to flex-end to stick to bottom */
-    padding: 2rem !important;
+    justify-content: flex-end !important;
+    padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
     border-radius: 2rem !important;
 }
 
-/* Profile picture container specific */
+/* Profile picture container */
 .section_pic-container {
-    width: 400px !important;
-    height: 700px !important;
-    background: none !important; /* Remove ALL background */
-    padding: 0 !important;
-    border: none !important; /* Remove any borders */
-    box-shadow: none !important; /* Remove any shadows */
-    overflow: hidden !important; /* Keep image within border radius */
+    background: none !important;
+    overflow: hidden !important;
+    position: relative !important; /* For absolute positioning of image */
 }
 
 /* Profile picture */
@@ -2839,8 +2837,12 @@ p.section__text__p1 {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    object-position: 50% 50% !important; /* Perfect center */
     border-radius: 2rem !important;
-    background: white !important; /* White background for image only */
+    position: absolute !important; /* Position absolutely within container */
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Perfect centering */
 }
 
 /* Text container specific */
@@ -2914,4 +2916,79 @@ p.section__text__p1 {
     padding: 0 !important;
     display: block !important; /* Removes any inline spacing */
     border-radius: 2rem !important;
+}
+
+/* Add gap between header and profile section */
+#profile {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 4rem !important;
+    margin-top: 150px !important; /* Increased gap from header */
+    padding: 0 2rem !important;
+}
+
+/* Make containers exactly equal */
+.section_pic-container,
+.section__text {
+    width: 500px !important; /* Exactly equal widths */
+    height: 700px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 2rem !important;
+}
+
+/* Perfect profile picture centering */
+.section_pic-container {
+    position: relative !important;
+    overflow: hidden !important;
+    background: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.section_pic-container img {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 2rem !important;
+}
+
+/* Mobile fixes */
+@media screen and (max-width: 968px) {
+    #profile {
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-top: 120px !important;
+        padding: 0 1rem !important;
+        gap: 2rem !important;
+    }
+
+    .section_pic-container,
+    .section__text {
+        width: 100% !important;
+        max-width: 500px !important;
+        height: auto !important; /* Allow height to adjust */
+    }
+
+    .section_pic-container {
+        height: 500px !important; /* Fixed height for mobile */
+    }
+
+    .section__text {
+        padding: 2rem !important;
+    }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+    #profile {
+        margin-top: 100px !important;
+    }
+
+    .section_pic-container {
+        height: 400px !important; /* Smaller height for very small screens */
+    }
 }
