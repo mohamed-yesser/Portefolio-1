@@ -1,3 +1,25 @@
+@media screen and (max-width: 1400px) {
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .section__pic-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto !important;
+    }
+    .about-containers {
+        flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+        height: fit-content;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #desktop-nav .nav-links {
         display: none !important;
@@ -66,45 +88,22 @@
         color: #0071e3 !important;
     }
 
-    /* Center all sections */
-    section {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 2rem 1rem !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    /* Center all containers */
-    .section-container,
-    .about-details-container,
-    .experience-details-container,
-    .about-containers {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Center project containers */
-    .details-container.color-container {
-        width: 100% !important;
-        max-width: 400px !important;
-        margin: 1rem auto !important;
-    }
-
-    /* Add these critical centering styles */
     #profile,
     .section-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     section {
-        margin: 0 5%;
+        margin: 0 auto !important;
+        width: 90% !important;
+        max-width: 600px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .section__pic-container {
@@ -113,8 +112,43 @@
         margin: 0 auto 2rem;
     }
 
-    .about-containers {
-        margin-top: 0;
+    .about-containers,
+    .contact-info-upper-container,
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .details-container {
+        margin: 1.5rem auto !important;
+        width: 90% !important;
+    }
+
+    .text-container {
+        text-align: center;
+    }
+
+    .section__text,
+    .text-container,
+    .title,
+    p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .section__pic-container,
+    .project-img {
+        margin: 0 auto !important;
+    }
+
+    .buttons-row,
+    .socials-container {
+        justify-content: center !important;
+        margin: 1rem auto !important;
     }
 }
 
@@ -142,54 +176,6 @@
         max-height: calc(100vh - 100px) !important;
         overflow-y: auto !important;
     }
-
-    /* Force center alignment */
-    .section__text__p1,
-    .title,
-    .section__text__p2,
-    .experience-sub-title,
-    .project-title {
-        text-align: center !important;
-        width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    /* Center profile content */
-    #profile {
-        padding: 0 1rem !important;
-        margin-top: 100px !important;
-    }
-
-    .section__text {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-        padding: 2rem !important;
-        text-align: center !important;
-    }
-
-    /* Center buttons */
-    .buttons-row {
-        width: 100% !important;
-        max-width: 300px !important;
-        margin: 1rem auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .icon-btn-group {
-        width: 100% !important;
-        justify-content: center !important;
-    }
-
-    /* Center images */
-    .project-img,
-    .webdev-image {
-        margin: 0 auto !important;
-        display: block !important;
-    }
 }
 
 /* Add styles for even smaller screens */
@@ -198,21 +184,6 @@
         width: calc(100vw - 2rem) !important;
         right: 1rem !important;
         left: 1rem !important;
-    }
-
-    /* Adjust container widths */
-    .section-container,
-    .about-details-container,
-    .experience-details-container,
-    .about-containers,
-    .details-container {
-        width: 95% !important;
-        margin: 0 auto !important;
-    }
-
-    /* Ensure text stays centered */
-    * {
-        text-align: center !important;
     }
 }
 
@@ -244,67 +215,6 @@
 .icon-btn-group .btn {
     pointer-events: none;
     cursor: default;
-}
-
-@media screen and (max-width: 600px) {
-    /* These were the key styles missing from your new code */
-    #profile {
-        height: auto;
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    article {
-        font-size: 1rem;
-    }
-
-    footer nav {
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-        flex-wrap: wrap;
-    }
-
-    .contact-info-container {
-        margin: 0;
-    }
-
-    .contact-info-container p,
-    .nav-links li a {
-        font-size: 1rem;
-    }
-
-    .experience-sub-title {
-        font-size: 1.25rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-
-    .section__text__p2 {
-        font-size: 1.25rem;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .text-container {
-        text-align: justify;
-    }
 }
 
 
