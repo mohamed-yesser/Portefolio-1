@@ -11,9 +11,9 @@
   --nav-bg: rgb(219, 241, 251); /* Changed to match the blurry blue container style */
   
   --border: rgba(0, 0, 0, 0.1);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 4px rgba(0, 0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0,0,0.07);
+  --shadow-lg: 0 8px 16px rgba(0, 0,0,0.1);
   --container-bg: rgba(0, 113, 227, 0.05);
   --container-border: rgba(0, 113, 227, 0.2);
   --container-shadow: 0 10px 30px rgba(0, 113, 227, 0.1);
@@ -2800,4 +2800,118 @@ p.section__text__p1 {
     width: 100% !important;
     justify-content: center !important;
   }
+}
+
+/* Profile section layout */
+#profile {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 4rem !important;
+    padding-top: 120px !important;
+    margin-top: 80px !important;
+}
+
+/* Profile containers - make them exactly the same height and align bottom */
+.section_pic-container,
+.section__text {
+    height: 700px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important; /* Changed to flex-end to stick to bottom */
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+    border-radius: 2rem !important;
+}
+
+/* Profile picture container specific */
+.section_pic-container {
+    width: 400px !important;
+    height: 700px !important;
+    background: none !important; /* Remove ALL background */
+    padding: 0 !important;
+    border: none !important; /* Remove any borders */
+    box-shadow: none !important; /* Remove any shadows */
+    overflow: hidden !important; /* Keep image within border radius */
+}
+
+/* Profile picture */
+.section_pic-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 2rem !important;
+    background: white !important; /* White background for image only */
+}
+
+/* Text container specific */
+.section__text {
+    width: 600px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Text content spacing */
+.section__text {
+    gap: 1rem !important; /* Space between text elements */
+}
+
+/* Title and text positioning */
+.section__text__p1,
+.title,
+.section__text__p2 {
+    margin: 0 !important; /* Remove default margins */
+}
+
+/* Push social icons and webdev image up from buttons */
+.socials-container {
+    margin-bottom: 2rem !important;
+}
+
+.webdev-image {
+    margin-bottom: 2rem !important;
+}
+
+/* Keep buttons at very bottom */
+.buttons-row {
+    margin: 0 !important;
+}
+
+/* Profile picture container */
+.section_pic-container {
+    width: 400px !important;
+}
+
+/* Text content container */
+.section__text {
+    width: 600px !important;
+}
+
+/* Ensure images fill their containers properly */
+.section_pic-container img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Profile picture container */
+.section_pic-container {
+    width: 400px !important;
+    height: 700px !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    border-radius: 2rem !important;
+}
+
+/* Profile picture */
+.section_pic-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important; /* Centers the image */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important; /* Removes any inline spacing */
+    border-radius: 2rem !important;
 }
