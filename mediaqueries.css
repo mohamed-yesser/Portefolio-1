@@ -177,7 +177,7 @@
 }
 
 /* Add this meta tag to your HTML head */
-/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> */
 
 /* Force everything to stay within viewport */
 @media screen and (max-width: 1400px) {
@@ -203,27 +203,18 @@
         align-items: center !important;
     }
 
+    /* Remove arrows */
+    .arrow,
+    section::after,
+    section::before {
+        display: none !important;
+    }
+
     /* Fix profile section specifically */
     #profile {
         margin-top: 80px !important;
         padding-top: 2rem !important;
         height: auto !important;
-    }
-
-    /* Fix profile picture */
-    .section_pic-container {
-        width: 200px !important;
-        height: 200px !important;
-        margin: 0 auto 1rem !important;
-        border-radius: 20px !important;
-        overflow: hidden !important;
-    }
-
-    .section_pic-container img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center !important;
     }
 
     /* Center text content */
@@ -233,26 +224,6 @@
         margin: 0 auto !important;
         padding: 0 !important;
         text-align: center !important;
-    }
-
-    /* Fix containers */
-    .section-container,
-    .about-containers,
-    .experience-details-container {
-        width: 100% !important;
-        max-width: 500px !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-    }
-
-    /* Fix buttons */
-    .buttons-row {
-        width: 100% !important;
-        max-width: 400px !important;
-        margin: 1rem auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1rem !important;
     }
 }
 
