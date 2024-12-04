@@ -2558,3 +2558,163 @@ nav a:hover {
   object-fit: cover !important;
 }
 
+/* Add these rules at the end of your style.css file */
+
+@media screen and (max-width: 968px) {
+  /* Center profile section */
+  #profile {
+    padding: 0 2rem !important;
+    margin-top: 100px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Center text elements */
+  .section__text__p1,
+  .title,
+  .section__text__p2,
+  .section__text {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Center social icons */
+  .socials-container {
+    justify-content: center !important;
+    margin: 1rem auto !important;
+  }
+
+  /* Center buttons */
+  .buttons-row {
+    align-items: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+
+  /* Center experience and projects sections */
+  .experience-details-container,
+  .about-containers,
+  .article-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Center project cards */
+  .details-container.color-container {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 1rem auto !important;
+  }
+
+  /* Center contact section */
+  #contact {
+    padding: 0 1rem !important;
+    margin: 2rem auto !important;
+    width: 100% !important;
+    max-width: 500px !important;
+  }
+
+  /* Center contact info containers */
+  .contact-info-upper-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+
+  .contact-info-container {
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-content: center !important;
+  }
+
+  /* Center form elements */
+  #contact form {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Ensure images stay centered */
+  .project-img,
+  .webdev-image {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* Additional fixes for even smaller screens */
+@media screen and (max-width: 480px) {
+  .buttons-row {
+    max-width: 300px !important;
+  }
+
+  .icon-btn-group {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .title {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Center all section titles and subtitles */
+.section__text__p1,
+.title,
+.section__text__p2,
+.experience-sub-title,
+h1.title,
+p.section__text__p1 {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure container alignment */
+.section-container,
+.about-details-container,
+.experience-details-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Center text in details containers */
+.details-container h3,
+.details-container p {
+    text-align: center !important;
+}
+
+/* Ensure project titles are centered */
+.project-title {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Adjust spacing for experience and projects titles */
+#experience .section__text__p1,
+#experience .title,
+#projects .section__text__p1,
+#projects .title {
+    margin-top: -2rem !important;  /* Move titles up */
+    margin-bottom: 2rem !important;  /* Maintain spacing below */
+}
+
+/* Adjust the arrow positioning */
+#experience .arrow,
+#projects .arrow {
+    margin-top: 2rem !important;  /* Add some space above arrows */
+}
+
+/* Ensure proper spacing for containers */
+.experience-details-container,
+.about-containers {
+    margin-top: 1rem !important;  /* Reduce space between title and content */
+}
