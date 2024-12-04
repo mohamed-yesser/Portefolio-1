@@ -2718,3 +2718,86 @@ p.section__text__p1 {
 .about-containers {
     margin-top: 1rem !important;  /* Reduce space between title and content */
 }
+
+/* Add these styles at the end of your style.css file to override previous styles */
+
+/* Force center alignment for all sections on mobile */
+@media screen and (max-width: 968px) {
+  /* Center all sections */
+  #profile,
+  #about,
+  #experience,
+  #projects,
+  #contact {
+    width: 100% !important;
+    padding: 0 1rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Center all containers */
+  .section-container,
+  .about-details-container,
+  .experience-details-container,
+  .about-containers,
+  .details-container,
+  .article-container {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 1rem !important;
+  }
+
+  /* Center all text elements */
+  .section__text__p1,
+  .title,
+  .section__text__p2,
+  .experience-sub-title,
+  h1.title,
+  p.section__text__p1,
+  .details-container h3,
+  .details-container p,
+  .project-title {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Center profile section specifically */
+  .section__text {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+    text-align: center !important;
+  }
+
+  /* Center images */
+  .project-img,
+  .webdev-image,
+  .icon {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Center buttons */
+  .buttons-row,
+  .btn-container {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 1rem auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .icon-btn-group {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
